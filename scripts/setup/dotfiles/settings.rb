@@ -1,5 +1,5 @@
 module Settings
-  DOT_FILE_LIST = ['.pryrc', '.vimrc', '.zprofile', '.zshrc', '.profile', '.gemrc', '.bashrc', '.bash_profile']
+  DOT_FILE_LIST = ['.pryrc', '.vimrc', '.zprofile', '.zshrc', '.zshenv', '.profile', '.gemrc', '.bashrc', '.bash_profile']
   HOME_DIR = Dir.home
   BACKUP_DIR = File.join(HOME_DIR, '.myconfigurations-backups')
   WORKING_DIR = File.join(HOME_DIR, '.myconfigurations', 'workstation', 'dotfiles')
