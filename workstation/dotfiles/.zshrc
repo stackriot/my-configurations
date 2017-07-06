@@ -47,6 +47,9 @@ source $ZSH/oh-my-zsh.sh
 #disable auto correct
 unsetopt correct_all
 
+# Disable hostname completion
+zstyle ':completion:*' hosts off
+
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 source $HOME/.myconfigurations/workstation/shell/includes
