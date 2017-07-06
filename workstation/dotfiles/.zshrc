@@ -1,3 +1,6 @@
+# Profiler : zprof
+zmodload zsh/zprof
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -52,3 +55,12 @@ eval "$(direnv hook zsh)"
 
 # For osx machines fix the alt + arrow functionality
 bindkey -e; bindkey '\e\e[C' forward-word; bindkey '\e\e[D' backward-word
+
+
+
+if [[ -n $ZSH_ENABLE_PROFILE ]]; then
+  # turn off tracing
+  unsetopt xtrace
+  # restore stderr to the value saved in FD 3
+  exec 2>&3 3>&-
+fi
