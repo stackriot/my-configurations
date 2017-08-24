@@ -21,3 +21,15 @@ function showfiles() {
 function cls() {
   osascript -e 'tell application "System Events" to keystroke "k" using command down'
 }
+
+# NOTE: Tracking Issues that References Speed
+# https://github.com/robbyrussell/oh-my-zsh/issues/5327
+function cleanshell(){
+  echo "Removing *.asl files..."
+  sudo rm -rf /private/var/log/asl/*.asl
+  echo "Removing .zsh_history files..."
+  sudo rm $HOME/.zsh_history
+  echo "Removing .zcompdump* files..."
+  sudo rm -rf $HOME/.zcompdump*
+  time zsh -ilc exit
+}
